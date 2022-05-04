@@ -21,3 +21,8 @@ values ('Madhavee','Kadivar','Jamjodhpur','Jamnagar','Gujarat',360530,8562451251
 ---UC_4 Edit the existing contact
 update AddressBookTable set Zip = 985625 where First_name = 'Akanksha';
 select * from AddressBookTable;
+
+---UC_5 Delete person from table
+delete from AddressBookTable where First_name = 'Akanksha';
+select * from AddressBookTable;
+
