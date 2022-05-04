@@ -24,7 +24,8 @@ select * from AddressBookTable;
 
 ---UC_5 Delete person from table
 delete from AddressBookTable where First_name = 'Akanksha';
-select * from AddressBookTable;
+
+
 
 ----UC_6 Retrieve data using City name
 insert into AddressBookTable
@@ -34,3 +35,9 @@ insert into AddressBookTable
 values ('Akanksha','Lanjewar','Nagpur','Nagpur','Maharastra',561235,87451284512,'akanksha@gmail.com');
 select * from AddressBookTable where city = 'Jamnagar';
 select * from AddressBookTable where state = 'Gujarat';
+
+---UC_7 the size of address book by City and State
+select count(city) as Number_of_City from AddressBookTable ;
+select count(State) as Number_of_States from AddressBookTable ;
+select City,count(First_name) as TotalPersons from AddressBookTable group by City;
+select State,count(First_name) as TotalPersons from AddressBookTable group by State;
