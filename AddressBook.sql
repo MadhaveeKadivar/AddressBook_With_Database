@@ -47,3 +47,10 @@ values ('Lisan','Kadivar','Jamjodhpur','Jamnagar','Gujarat',360530,98461532455,'
 ('Princy','Chhatrala','Junagadh','Junagadh','Gujarat',845896,9864518745,'princy@gmail.com');
 select * from AddressBookTable;
 select * from AddressBookTable where City = 'Jamnagar' order by First_name;
+
+---UC_9 Add one more colum of 'type'
+alter table AddressBookTable add Type varchar(50);
+update AddressBookTable set Type = 'Friends' where First_name = 'Brich' or First_name = 'Princy';
+update AddressBookTable set Type = 'Family' where First_name = 'Madhavee' or First_name = 'Lisan';
+update AddressBookTable set Type = 'Profession' where First_name = 'Abhilash' or First_name = 'Ronit' or First_name = 'Akanksha';
+select * from AddressBookTable;
