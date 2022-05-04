@@ -54,3 +54,7 @@ update AddressBookTable set Type = 'Friends' where First_name = 'Brich' or First
 update AddressBookTable set Type = 'Family' where First_name = 'Madhavee' or First_name = 'Lisan';
 update AddressBookTable set Type = 'Profession' where First_name = 'Abhilash' or First_name = 'Ronit' or First_name = 'Akanksha';
 select * from AddressBookTable;
+
+---UC_10 get number of contact persons i.e. count by type
+select Type,count(First_name) as TotalPersons from AddressBookTable group by Type;
+select count(Type) as Total_Number_of_person from AddressBookTable;
