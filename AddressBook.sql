@@ -26,3 +26,11 @@ select * from AddressBookTable;
 delete from AddressBookTable where First_name = 'Akanksha';
 select * from AddressBookTable;
 
+----UC_6 Retrieve data using City name
+insert into AddressBookTable
+values ('Abhilash','Meher','sundergarth','Bhuvneswar','Odisha',845623,84512845554,'abhilash@gmail.com'),
+('Ronit','Patel','Ahemdabad','Ahemdabad','Gujarat',8645865,84512846565,'ronit@gmail.com');
+insert into AddressBookTable
+values ('Akanksha','Lanjewar','Nagpur','Nagpur','Maharastra',561235,87451284512,'akanksha@gmail.com');
+select * from AddressBookTable where city = 'Jamnagar';
+select * from AddressBookTable where state = 'Gujarat';
